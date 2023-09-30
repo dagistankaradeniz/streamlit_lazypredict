@@ -13,7 +13,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-st.markdown('## Classification')
+st.markdown('## `lazypredict.Supervised` Classification')
 with st.spinner('Preparing...'):
     breast_cancer = datasets.load_breast_cancer()
     df_breast_cancer = pd.DataFrame(data=breast_cancer.data, columns=breast_cancer.feature_names)
@@ -33,7 +33,7 @@ with st.spinner('Preparing...'):
     st.markdown('##### Model Evaluation')
     st.dataframe(clf_models, use_container_width=True)
 
-st.markdown('## Regression')
+st.markdown('## `lazypredict.Supervised` Regression')
 with st.spinner('Preparing...'):
     diabetes = datasets.load_diabetes()
     df_diabetes = pd.DataFrame(data=diabetes.data, columns=diabetes.feature_names)
